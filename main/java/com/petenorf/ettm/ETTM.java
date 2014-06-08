@@ -1,5 +1,6 @@
 package com.petenorf.ettm;
 
+import com.petenorf.ettm.age.jurassic.JurassicPeriod;
 import com.petenorf.ettm.proxy.IProxy;
 import com.petenorf.ettm.util.reference.Reference;
 
@@ -21,7 +22,7 @@ public class ETTM {
 	
     @EventHandler
     public void preInit(FMLPreInitializationEvent event){
-    	
+    	JurassicPeriod.preInit();
     }
     
     @EventHandler
