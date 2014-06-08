@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.petenorf.ettm.age.jurassic.JurassicPeriod;
+import com.petenorf.ettm.age.jurassic.world.gen.tree.WorldGenFernTree;
 import com.petenorf.ettm.util.reference.Names;
 import com.petenorf.ettm.util.reference.Reference;
 
@@ -33,7 +34,7 @@ public class BlockJurassicSapling extends BlockSapling {
 	}
 
 	@Override
-	//TODO:		registerIcons()
+
 	public void registerBlockIcons(IIconRegister iconRegister)
 	{
 		textures = new IIcon[saplings.length];
@@ -45,7 +46,7 @@ public class BlockJurassicSapling extends BlockSapling {
 	}
 
 	@Override
-	//TODO:		 getIcon()
+
 	public IIcon getIcon(int side, int meta)
 	{
 		if (meta < 0 || meta >= saplings.length) {
@@ -56,7 +57,7 @@ public class BlockJurassicSapling extends BlockSapling {
 	}
 
 	@Override
-	//TODO:		getSubBlocks()
+
 	public void getSubBlocks(Item block, CreativeTabs creativeTabs, List list) 
 	{
 		for (int i = 0; i < saplings.length; ++i) 
@@ -72,17 +73,17 @@ public class BlockJurassicSapling extends BlockSapling {
 	}
 
 	@Override
-	//TODO:		   canPlaceBlockOnSide
+
 	public boolean canPlaceBlockOnSide(World world, int x, int y, int z, int side)
 	{
 		return isValidPosition(world, x, y, z, -1);
 	}
 
 	@Override
-	//TODO:		   canBlockStay()
+
 	public boolean canBlockStay(World world, int x, int y, int z)
 	{
-		//TODO:			   getBlock()
+	
 		Block soil = world.getBlock(x, y - 1, z);
 
 		if (world.getBlockMetadata(x, y, z) != 1)
@@ -94,21 +95,20 @@ public class BlockJurassicSapling extends BlockSapling {
 	}
 
 	@Override
-	//TODO:		updateTick()
+
 	public void updateTick(World world, int x, int y, int z, Random random)
 	{
 		if (!world.isRemote)
 		{
 			if (world.getBlockLightValue(x, y + 1, z) >= 9 && random.nextInt(7) == 0) 
 			{
-				//TODO: growTree()
+
 				this.func_149878_d(world, x, y, z, random);
 			}
 		}
 	}
 
 	@Override
-	//TODO:		growTree()
 	public void func_149878_d(World world, int x, int y, int z, Random random)
 	{
 		int meta = world.getBlockMetadata(x, y, z) & TYPES;
@@ -119,35 +119,31 @@ public class BlockJurassicSapling extends BlockSapling {
 		{
 			switch (meta)
 			{
-			case 0: // Apple Tree
-				/*obj = new WorldGenOriginalTree(Blocks.log, BOPCBlocks.appleLeaves, 0, true);*/
-				obj = null;
+			case 0:
+				obj = new WorldGenFernTree(JurassicBlocks.jurassicLog, JurassicBlocks.jurassicLeaves, 0, true);
 				break;
 			}
 		}
 
 		if (obj != null)
 		{
-			//TODO: setBlockToAir()
 			world.setBlockToAir(x, y, z);
-
 			if (!((WorldGenerator)obj).generate(world, random, x, y, z)) 
 			{
-				//TODO: setBlock()
 				world.setBlock(x, y, z, this, meta, 2);
 			}
 		}
 	}
 
 	@Override
-	//TODO     damageDropped()
+
 	public int damageDropped(int meta)
 	{
 		return meta & TYPES;
 	}
 
 	@Override
-	//TODO:	   getDamageValue()
+
 	public int getDamageValue(World world, int x, int y, int z)
 	{
 		return world.getBlockMetadata(x, y, z) & TYPES;

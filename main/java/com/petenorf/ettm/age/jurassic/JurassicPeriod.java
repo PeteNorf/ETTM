@@ -5,6 +5,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 import com.petenorf.ettm.age.jurassic.blocks.JurassicBlocks;
+import com.petenorf.ettm.event.ETTMEventHandler;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -20,6 +21,7 @@ public class JurassicPeriod {
 	
 	public static void preInit() {
 		JurassicBlocks.load();
+		ETTMEventHandler.registerEvents();
 	}
 	
 	public void init() {
