@@ -6,6 +6,7 @@ import java.util.Random;
 
 import com.petenorf.ettm.age.jurassic.JurassicPeriod;
 import com.petenorf.ettm.util.reference.Names;
+import com.petenorf.ettm.util.reference.Reference;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeavesBase;
@@ -45,8 +46,8 @@ public class BlockJurassicLeaves extends BlockLeavesBase implements IShearable{
 		textures = new IIcon[3][leaves.length];
 			for (int i = 0; i < leaves.length; ++i)
 			{
-				textures[0][i] = iconRegister.registerIcon("biomesoplenty:leaves_" + leaves[i] + "_fancy");
-				textures[1][i] = iconRegister.registerIcon("biomesoplenty:leaves_" + leaves[i] + "_fast");
+				textures[0][i] = iconRegister.registerIcon(Reference.MOD_ID + ":leaves_" + leaves[i] + "_fancy");
+				textures[1][i] = iconRegister.registerIcon(Reference.MOD_ID + ":leaves_" + leaves[i] + "_fast");
 			}
 	}
 	@Override
