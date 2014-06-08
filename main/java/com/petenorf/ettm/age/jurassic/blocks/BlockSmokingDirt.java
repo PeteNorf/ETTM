@@ -1,4 +1,4 @@
-package com.petenorf.ettm.age.jurassic.Blocks;
+package com.petenorf.ettm.age.jurassic.blocks;
 
 import com.petenorf.ettm.age.jurassic.JurassicPeriod;
 import com.petenorf.ettm.util.reference.Names;
@@ -11,7 +11,7 @@ public class BlockSmokingDirt extends Block {
 	public BlockSmokingDirt(){
 		super(Material.ground);
 		setCreativeTab(JurassicPeriod.jurassicTab);
-		setBlockName(Names.Blocks.smokingDirt);
-		setBlockTextureName(Reference.MOD_ID + ":" + Names.Blocks.smokingDirt);
+		setBlockName(Names.Blocks.SMOKING_DIRT);
+		setBlockTextureName(Reference.MOD_ID + ":" + Names.Blocks.SMOKING_DIRT);
 	}
 }

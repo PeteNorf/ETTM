@@ -4,7 +4,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
-import com.petenorf.ettm.age.jurassic.Blocks.JurassicBlocks;
+import com.petenorf.ettm.age.jurassic.blocks.JurassicBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

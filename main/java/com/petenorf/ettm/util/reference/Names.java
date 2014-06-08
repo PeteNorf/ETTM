@@ -3,7 +3,11 @@ package com.petenorf.ettm.util.reference;
 public class Names {
 	public static class Blocks
 	{
-		public static final String smokingDirt = "smokingDirt";
+		public static final String SMOKING_DIRT = "SmokingDirt";
+		public static final String MUD = "Mud";
+		public static final String DINOEGG_DECORATIVE = "DinosaurEgg";
+		public static final String JURASSIC_WOOD = "JurassicLog";
+		public static final String JURASSIC_LEAVES = "JurassicLeaves";
 	}
 	
 	public static class Items

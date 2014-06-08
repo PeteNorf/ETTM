@@ -1,2 +1,4 @@
-tile.smokingDirt.name=Smoking Dirt
-itemGroup.jurassicTab=Jurrasic Period
+tile.SmokingDirt.name=Smoking Dirt
+itemGroup.jurassicTab=Jurassic Period
+tile.JurassicLog .fern.name=Fern Log
+tile.JurassicLeaves.fern.name=Fern Leaves
