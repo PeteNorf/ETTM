@@ -11,6 +11,15 @@ public class WorldGenPart {
 	public Block blockType;
 	public World world;
 	
+	public WorldGenPart(int x, int y, int z, int meta, Block block){
+		this.x = x;
+		this.y = y;
+		this.z = z;
+		this.meta = meta;
+		this.blockType = block;
+		this.world = null;
+	}
+	
 	public WorldGenPart(int x, int y, int z, int meta, Block block, World world){
 		this.x = x;
 		this.y = y;
