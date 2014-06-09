@@ -21,7 +21,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.util.ForgeDirection;
 
 public class BlockJurassicSapling extends BlockSapling {
-	private static final String[] saplings = new String[] {"fern"};
+	private static final String[] saplings = new String[] {"fern", "conifer"};
 	private IIcon[] textures;
 	private static final int TYPES = 15;
 
@@ -120,7 +120,7 @@ public class BlockJurassicSapling extends BlockSapling {
 			switch (meta)
 			{
 			case 0:
-				obj = new WorldGenFernTree(JurassicBlocks.jurassicLog, JurassicBlocks.jurassicLeaves, 0, true);
+				obj = new WorldGenFernTree(JurassicBlocks.jurassicLog, JurassicBlocks.jurassicLeaves, 0);
 				break;
 			}
 		}

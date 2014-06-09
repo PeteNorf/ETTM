@@ -24,7 +24,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import cpw.mods.fml.common.Loader;
 
 public class BlockJurassicLeaves extends BlockLeavesBase implements IShearable{
-	private static final String[] leaves = new String[] {"fern"};
+	private static final String[] leaves = new String[] {"fern", "conifer"};
 	private IIcon[][] textures;
 	int[] adjacentTreeBlocks;
 
@@ -43,7 +43,7 @@ public class BlockJurassicLeaves extends BlockLeavesBase implements IShearable{
 
 	public void registerBlockIcons(IIconRegister iconRegister)
 	{
-		textures = new IIcon[3][leaves.length];
+		textures = new IIcon[2][leaves.length];
 			for (int i = 0; i < leaves.length; ++i)
 			{
 				textures[0][i] = iconRegister.registerIcon(Reference.MOD_ID + ":leaves_" + leaves[i] + "_fancy");
@@ -68,7 +68,7 @@ public class BlockJurassicLeaves extends BlockLeavesBase implements IShearable{
 	@Override
 	public void getSubBlocks(Item block, CreativeTabs creativeTabs, List list) 
 	{
-		for (int i = 0; i < 4; ++i)
+		for (int i = 0; i < leaves.length; ++i)
 		{
 				list.add(new ItemStack(block, 1, i));
 		}

@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
 public class ItemBlockJurassicSapling extends ItemBlock {
-	private static final String[] saplings = new String[] {"fern"};
+	private static final String[] saplings = new String[] {"fern", "conifer"};
 	private static final int MAX = 0;
 	public ItemBlockJurassicSapling(Block block)
 	{
@@ -25,7 +25,7 @@ public class ItemBlockJurassicSapling extends ItemBlock {
 	@Override
 	public String getUnlocalizedName(ItemStack itemStack)
 	{
-		int meta = itemStack.getItemDamageForDisplay() > MAX ? 0 : itemStack.getItemDamageForDisplay();
+		int meta = itemStack.getItemDamageForDisplay() > MAX ? 1 : itemStack.getItemDamageForDisplay();
 		return super.getUnlocalizedName() + "." + (new StringBuilder()).append(saplings[meta]).append("Sapling").toString();
 	}
 

@@ -20,7 +20,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 public class BlockJurassicLog extends Block{
-	private static final String[] types = new String[] {"fern"};
+	private static final String[] types = new String[] {"fern", "conifer"};
 	private IIcon[] textures;
 	private IIcon[] logHearts;
 
