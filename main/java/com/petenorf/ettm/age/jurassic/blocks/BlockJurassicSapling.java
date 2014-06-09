@@ -124,7 +124,7 @@ public class BlockJurassicSapling extends BlockSapling {
 				obj = new WorldGenFernTree(JurassicBlocks.jurassicLog, JurassicBlocks.jurassicLeaves, 0);
 				break;
 			case 1:
-				obj = new WorldGenConiferTree(JurassicBlocks.jurassicLog, JurassicBlocks.jurassicLeaves, 0);
+				obj = new WorldGenConiferTree(JurassicBlocks.jurassicLog, JurassicBlocks.jurassicLeaves, 1);
 				break;
 			}
 		}

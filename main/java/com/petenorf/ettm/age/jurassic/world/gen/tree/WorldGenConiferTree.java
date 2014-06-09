@@ -93,7 +93,7 @@ public class WorldGenConiferTree extends WorldGenAbstractTree {
 		//Generate Tree
 		for(int i = 0; i < tree.size(); i ++){
 			WorldGenPart block = tree.get(i);
-			world.setBlock(block.x, block.y, block.z, block.blockType);
+			world.setBlock(block.x, block.y, block.z, block.blockType, metaWood, 2);
 		}
 		return true;
 		}
