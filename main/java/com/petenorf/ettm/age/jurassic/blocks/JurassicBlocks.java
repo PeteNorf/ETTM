@@ -15,10 +15,12 @@ public class JurassicBlocks {
 	public static final Block jurassicLog = new BlockJurassicLog();
 	public static final Block jurassicLeaves = new BlockJurassicLeaves();
 	public static final Block jurassicSapling = new BlockJurassicSapling();
+	public static final Block basalt = new BlockBasalt();
 	
 	public static void load() {
 		GameRegistry.registerBlock(smokingDirt, Names.Blocks.SMOKING_DIRT);
 		GameRegistry.registerBlock(mud, Names.Blocks.MUD);
+		GameRegistry.registerBlock(basalt, Names.Blocks.BASALT);
 		GameRegistry.registerBlock(dinoEggDecorative, Names.Blocks.DINOEGG_DECORATIVE);
 		GameRegistry.registerBlock(jurassicLog, ItemBlockJurassicLog.class, "Log");
 		GameRegistry.registerBlock(jurassicLeaves, ItemBlockJurassicLeaves.class, Names.Blocks.JURASSIC_LEAVES);

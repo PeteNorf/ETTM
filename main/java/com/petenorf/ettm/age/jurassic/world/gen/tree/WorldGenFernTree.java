@@ -1,8 +1,11 @@
 package com.petenorf.ettm.age.jurassic.world.gen.tree;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import com.petenorf.ettm.age.jurassic.blocks.JurassicBlocks;
+import com.petenorf.ettm.util.help.WorldGenPart;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
@@ -18,7 +21,7 @@ public class WorldGenFernTree extends WorldGenAbstractTree{
 
 	private final Block wood;
 	private final Block leaves;
-
+	List<WorldGenPart> tryBuild = new ArrayList<WorldGenPart>();
 	private final int metaWood;
 	private int metaLeaves;
 
@@ -56,104 +59,104 @@ public class WorldGenFernTree extends WorldGenAbstractTree{
     	Block block = world.getBlock(x, y, z);
     	
     	for(int i = 0; i < 5; i++){
-    		buildBlock(world, x, y + i, z, JurassicBlocks.jurassicLog, 0);
+    		buildBlock(world, x, y + i, z, this.wood, 0);
     	}
-    	buildBlock(world, x+1, y + 4, z, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x-1, y + 4, z, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x, y+ 4, z - 1, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x, y+ 4, z + 1, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x+1, y + 4, z, this.leaves, 0);
+    	buildBlock(world, x-1, y + 4, z, this.leaves, 0);
+    	buildBlock(world, x, y+ 4, z - 1, this.leaves, 0);
+    	buildBlock(world, x, y+ 4, z + 1, this.leaves, 0);
     	for(int j = 0; j < 4; j++){
     	for(int i = -1; i <= 1; i ++){		
     	for(int k = -1; k <= 1; k++){
-    				buildBlock(world, x+k, y + j + 5, z + i, JurassicBlocks.jurassicLeaves, 0);
+    				buildBlock(world, x+k, y + j + 5, z + i, this.leaves, 0);
     			}
     	}
     	}
-    	buildBlock(world, x, y+ 8, z + 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x, y+ 7, z + 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x, y+ 6, z + 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x, y+ 5, z + 2, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x, y+ 8, z + 2, this.leaves, 0);
+    	buildBlock(world, x, y+ 7, z + 2, this.leaves, 0);
+    	buildBlock(world, x, y+ 6, z + 2, this.leaves, 0);
+    	buildBlock(world, x, y+ 5, z + 2, this.leaves, 0);
     	
-    	buildBlock(world, x, y+ 8, z + 3, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x, y+ 7, z + 3, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x, y+ 8, z + 3, this.leaves, 0);
+    	buildBlock(world, x, y+ 7, z + 3, this.leaves, 0);
     	
-    	buildBlock(world, x, y+ 8, z + 4, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x, y+ 8, z + 4, this.leaves, 0);
     	
-    	buildBlock(world, x, y+ 8, z - 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x, y+ 7, z - 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x, y+ 6, z - 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x, y+ 5, z - 2, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x, y+ 8, z - 2, this.leaves, 0);
+    	buildBlock(world, x, y+ 7, z - 2, this.leaves, 0);
+    	buildBlock(world, x, y+ 6, z - 2, this.leaves, 0);
+    	buildBlock(world, x, y+ 5, z - 2, this.leaves, 0);
     	
-    	buildBlock(world, x, y+ 8, z - 3, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x, y+ 7, z - 3, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x, y+ 8, z - 3, this.leaves, 0);
+    	buildBlock(world, x, y+ 7, z - 3, this.leaves, 0);
     	
-    	buildBlock(world, x, y+ 8, z - 4, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x, y+ 8, z - 4, this.leaves, 0);
     	
-    	buildBlock(world, x + 2, y+ 8, z, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 2, y+ 7, z, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 2, y+ 6, z, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 2, y+ 5, z, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x + 2, y+ 8, z, this.leaves, 0);
+    	buildBlock(world, x + 2, y+ 7, z, this.leaves, 0);
+    	buildBlock(world, x + 2, y+ 6, z, this.leaves, 0);
+    	buildBlock(world, x + 2, y+ 5, z, this.leaves, 0);
     	
-    	buildBlock(world, x + 3, y+ 8, z, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 3, y+ 7, z, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x + 3, y+ 8, z, this.leaves, 0);
+    	buildBlock(world, x + 3, y+ 7, z, this.leaves, 0);
     	
-    	buildBlock(world, x + 4, y+ 8, z, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x + 4, y+ 8, z, this.leaves, 0);
     	
-    	buildBlock(world, x - 2, y+ 8, z, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 2, y+ 7, z, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 2, y+ 6, z, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 2, y+ 5, z, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x - 2, y+ 8, z, this.leaves, 0);
+    	buildBlock(world, x - 2, y+ 7, z, this.leaves, 0);
+    	buildBlock(world, x - 2, y+ 6, z, this.leaves, 0);
+    	buildBlock(world, x - 2, y+ 5, z, this.leaves, 0);
     	
-    	buildBlock(world, x - 3, y+ 8, z, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 3, y+ 7, z, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x - 3, y+ 8, z, this.leaves, 0);
+    	buildBlock(world, x - 3, y+ 7, z, this.leaves, 0);
     	
-    	buildBlock(world, x - 4, y+ 8, z, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x - 4, y+ 8, z, this.leaves, 0);
     	
-    	buildBlock(world, x + 2, y+ 8, z + 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 2, y+ 7, z + 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 2, y+ 6, z + 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 2, y+ 5, z + 2, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x + 2, y+ 8, z + 2, this.leaves, 0);
+    	buildBlock(world, x + 2, y+ 7, z + 2, this.leaves, 0);
+    	buildBlock(world, x + 2, y+ 6, z + 2, this.leaves, 0);
+    	buildBlock(world, x + 2, y+ 5, z + 2, this.leaves, 0);
     	
-    	buildBlock(world, x + 3, y+ 8, z + 3, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 3, y+ 7, z + 3, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x + 3, y+ 8, z + 3, this.leaves, 0);
+    	buildBlock(world, x + 3, y+ 7, z + 3, this.leaves, 0);
     	
-    	buildBlock(world, x - 2, y+ 8, z - 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 2, y+ 7, z - 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 2, y+ 6, z - 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 2, y+ 5, z - 2, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x - 2, y+ 8, z - 2, this.leaves, 0);
+    	buildBlock(world, x - 2, y+ 7, z - 2, this.leaves, 0);
+    	buildBlock(world, x - 2, y+ 6, z - 2, this.leaves, 0);
+    	buildBlock(world, x - 2, y+ 5, z - 2, this.leaves, 0);
     	
-    	buildBlock(world, x - 3, y+ 8, z - 3, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 3, y+ 7, z - 3, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x - 3, y+ 8, z - 3, this.leaves, 0);
+    	buildBlock(world, x - 3, y+ 7, z - 3, this.leaves, 0);
     	
-    	buildBlock(world, x + 2, y+ 8, z -  2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 2, y+ 7, z - 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 2, y+ 6, z - 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 2, y+ 5, z - 2, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x + 2, y+ 8, z -  2, this.leaves, 0);
+    	buildBlock(world, x + 2, y+ 7, z - 2, this.leaves, 0);
+    	buildBlock(world, x + 2, y+ 6, z - 2, this.leaves, 0);
+    	buildBlock(world, x + 2, y+ 5, z - 2, this.leaves, 0);
     	
-    	buildBlock(world, x + 3, y+ 8, z - 3, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 3, y+ 7, z - 3, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x + 3, y+ 8, z - 3, this.leaves, 0);
+    	buildBlock(world, x + 3, y+ 7, z - 3, this.leaves, 0);
     	
-    	buildBlock(world, x - 2, y+ 8, z + 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 2, y+ 7, z + 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 2, y+ 6, z + 2, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 2, y+ 5, z + 2, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x - 2, y+ 8, z + 2, this.leaves, 0);
+    	buildBlock(world, x - 2, y+ 7, z + 2, this.leaves, 0);
+    	buildBlock(world, x - 2, y+ 6, z + 2, this.leaves, 0);
+    	buildBlock(world, x - 2, y+ 5, z + 2, this.leaves, 0);
     	
-    	buildBlock(world, x - 3, y+ 8, z + 3, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 3, y+ 7, z + 3, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x - 3, y+ 8, z + 3, this.leaves, 0);
+    	buildBlock(world, x - 3, y+ 7, z + 3, this.leaves, 0);
     	
-    	buildBlock(world, x + 4, y+ 8, z + 3, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 3, y+ 8, z + 4, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x + 4, y+ 8, z + 3, this.leaves, 0);
+    	buildBlock(world, x + 3, y+ 8, z + 4, this.leaves, 0);
     	
-    	buildBlock(world, x - 4, y+ 8, z - 3, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 3, y+ 8, z - 4, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x - 4, y+ 8, z - 3, this.leaves, 0);
+    	buildBlock(world, x - 3, y+ 8, z - 4, this.leaves, 0);
     	
-    	buildBlock(world, x - 4, y+ 8, z + 3, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x - 3, y+ 8, z + 4, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x - 4, y+ 8, z + 3, this.leaves, 0);
+    	buildBlock(world, x - 3, y+ 8, z + 4, this.leaves, 0);
     	
-    	buildBlock(world, x + 4, y+ 8, z - 3, JurassicBlocks.jurassicLeaves, 0);
-    	buildBlock(world, x + 3, y+ 8, z - 4, JurassicBlocks.jurassicLeaves, 0);
+    	buildBlock(world, x + 4, y+ 8, z - 3, this.leaves, 0);
+    	buildBlock(world, x + 3, y+ 8, z - 4, this.leaves, 0);
     	
-    	
+
     	
     
     		
@@ -167,4 +170,6 @@ public class WorldGenFernTree extends WorldGenAbstractTree{
     		world.setBlock(x, y, z, block, meta, 2);
 		}
     }
-}
+    }
+    
+

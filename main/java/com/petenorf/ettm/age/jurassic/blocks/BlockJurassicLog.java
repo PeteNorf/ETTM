@@ -126,13 +126,13 @@ public class BlockJurassicLog extends Block{
 	@Override
 	public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face)
 	{
-		return Blocks.fire.getFlammability(this);
+		return 20;
 	}
 
 	@Override
 	public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face)
 	{
-		return Blocks.fire.getEncouragement(this);
+		return 5;
 	}
 
 	@Override

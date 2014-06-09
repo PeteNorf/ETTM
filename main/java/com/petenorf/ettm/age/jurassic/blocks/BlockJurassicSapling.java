@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.petenorf.ettm.age.jurassic.JurassicPeriod;
+import com.petenorf.ettm.age.jurassic.world.gen.tree.WorldGenConiferTree;
 import com.petenorf.ettm.age.jurassic.world.gen.tree.WorldGenFernTree;
 import com.petenorf.ettm.util.reference.Names;
 import com.petenorf.ettm.util.reference.Reference;
@@ -121,6 +122,9 @@ public class BlockJurassicSapling extends BlockSapling {
 			{
 			case 0:
 				obj = new WorldGenFernTree(JurassicBlocks.jurassicLog, JurassicBlocks.jurassicLeaves, 0);
+				break;
+			case 1:
+				obj = new WorldGenConiferTree(JurassicBlocks.jurassicLog, JurassicBlocks.jurassicLeaves, 0);
 				break;
 			}
 		}
