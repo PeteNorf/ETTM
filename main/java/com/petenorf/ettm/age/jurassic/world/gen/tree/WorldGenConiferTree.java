@@ -81,6 +81,7 @@ public class WorldGenConiferTree extends WorldGenAbstractTree {
 		tree.add(new WorldGenPart(x - 1, y + height - 1, z, metaLeaves, leaves));
 		tree.add(new WorldGenPart(x, y + height - 1, z + 1, metaLeaves, leaves));
 		tree.add(new WorldGenPart(x, y + height - 1, z - 1, metaLeaves, leaves));
+		tree.add(new WorldGenPart(x, y + height, z, metaLeaves, leaves));
 		
 		//Check for space
 		for(int i = 0; i < tree.size(); i ++){
