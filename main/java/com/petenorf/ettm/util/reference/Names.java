@@ -10,6 +10,7 @@ public class Names {
 		public static final String JURASSIC_LEAVES = "JurassicLeaves";
 		public static final String JURASSIC_SAPLING = "JurassicSapling";
 		public static final String BASALT = "Basalt";
+		public static final String HOT_TAR = "hottar";
 	}
 	
 	public static class Items

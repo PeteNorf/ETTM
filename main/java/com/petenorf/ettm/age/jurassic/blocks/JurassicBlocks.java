@@ -7,8 +7,12 @@ import com.petenorf.ettm.util.reference.Names;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 
 public class JurassicBlocks {
+	//Blocks
 	public static final Block smokingDirt = new BlockSmokingDirt();
 	public static final Block mud = new BlockMud();
 	public static final Block dinoEggDecorative = new BlockDinoEggDecorative();
@@ -16,6 +20,7 @@ public class JurassicBlocks {
 	public static final Block jurassicLeaves = new BlockJurassicLeaves();
 	public static final Block jurassicSapling = new BlockJurassicSapling();
 	public static final Block basalt = new BlockBasalt();
+	public static final Block hotTar = new BlockHotTar();
 	
 	public static void load() {
 		GameRegistry.registerBlock(smokingDirt, Names.Blocks.SMOKING_DIRT);
@@ -25,5 +30,8 @@ public class JurassicBlocks {
 		GameRegistry.registerBlock(jurassicLog, ItemBlockJurassicLog.class, "Log");
 		GameRegistry.registerBlock(jurassicLeaves, ItemBlockJurassicLeaves.class, Names.Blocks.JURASSIC_LEAVES);
 		GameRegistry.registerBlock(jurassicSapling, ItemBlockJurassicSapling.class, Names.Blocks.JURASSIC_SAPLING);
+		GameRegistry.registerBlock(hotTar, Names.Blocks.HOT_TAR);
+		
+
 	}
 }
